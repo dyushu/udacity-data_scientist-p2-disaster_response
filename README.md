@@ -2,6 +2,26 @@
 This repository contains the files for the Udacity data scientist nano-degree project 2: build a disaster response pipeline.
 
 ## Contents
+Following is the file structure of the project:
+
+<pre><code>
+  - app
+| - template
+| |- master.html  # main page of web app
+| |- go.html  # classification result page of web app
+|- run.py  # Flask file that runs app
+
+- data
+|- disaster_categories.csv  # data to process 
+|- disaster_messages.csv  # data to process
+|- process_data.py
+|- InsertDatabaseName.db   # database to save clean data to
+
+- models
+|- train_classifier.py
+|- classifier.pkl  # saved model 
+
+</code></pre>
 
 - The folder `notebooks` contains some exploratory scripts.  See in
   particular `notebooks/ML Pipeline Preparation.py`, where a grid
@@ -19,6 +39,8 @@ This repository contains the files for the Udacity data scientist nano-degree pr
   scripts mentioned above are in the `out` folder at the root of this
   repository.
 
+- README.md
+
 ## Instructions
 
 1. Run the following commands in the project's root directory to set
@@ -34,7 +56,9 @@ This repository contains the files for the Udacity data scientist nano-degree pr
 2. Run the following command in the app's directory to run your web
     app.  `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. If you are running in Udacity's workspace, then try to get `WORKSPACEDOMAIN` and `WORKSPACEID` by typing `env|grep WORK` 
+
+4. If you are running in Udacity's workspace, go to https://SPACEID-3001.SPACEDOMAIN . Otherwise, go to http://0.0.0.0:3001/
 
 ## Acknowledgments
 
