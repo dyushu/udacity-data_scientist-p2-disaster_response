@@ -1,7 +1,7 @@
 # Disaster Response Pipeline
-This repository contains the files for the Udacity data scientist nano-degree project 2: build a disaster response pipeline.
+This repository contains the files for the Udacity data scientist nano-degree project 2: build a disaster response pipeline. This pipeline helps organizations classify test messages into 36 categories so that each message can be delt with more properly and efficiently.
 
-## Contents
+## Files in the Repository
 Following is the file structure of the project:
 
 <pre><code>
@@ -48,10 +48,10 @@ Following is the file structure of the project:
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv
-        data/disaster_categories.csv out/DisasterResponse.db`
+        data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves `python
         models/train_classifier.py data/DisasterResponse.db
-        out/classifier.pkl`
+        model/classifier.pkl`
 
 2. Run the following command in the app's directory to run your web
     app.  `python run.py`
