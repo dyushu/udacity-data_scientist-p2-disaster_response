@@ -1,5 +1,5 @@
 # Disaster Response Pipeline
-This repository contains the files for the Udacity data scientist nano-degree project 2: build a disaster response pipeline. This pipeline helps organizations classify test messages into 36 categories so that each message can be delt with more properly and efficiently.
+This repository contains the files for the Udacity data scientist nano-degree project 2: build a disaster response pipeline. This pipeline helps organizations to classify received test messages into 36 categories so that each request can be more properly and efficiently responded.
 
 ## Files in the Repository
 Following is the file structure of the project:
