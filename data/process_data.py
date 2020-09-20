@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 
 def load_data(messages_filepath, categories_filepath):
     '''
+    Load data, merge message with categories, and return as dataframe
     Input:
         messages_filepath: File path of messages data
         categories_filepath: File path of categories data
@@ -27,6 +28,7 @@ def load_data(messages_filepath, categories_filepath):
 
 def clean_data(df):
     '''
+    Clean df data, create categorical data, and drop duplicates
     Input:
         df: Merged dataset from messages and categories
     Output:
@@ -47,7 +49,7 @@ def clean_data(df):
         categories[column] = categories[column].apply(lambda x: x[-1])
     
         # convert column from string to numeric
-        categories[column] = categories[column].apply(lambda x: int(x))
+        categories[column] = categories[column].apply(lambda x: 1 if int(x)>0 else 0)
 
         
     # drop the original categories column from `df`
@@ -79,7 +81,7 @@ def save_data(df, database_filename):
         A SQLite database
     '''
     engine = create_engine('sqlite:///' + database_filename)
-    df.to_sql('DisasterMessages', engine, index=False, if_exist='replace')
+    df.to_sql('DisasterMessages', engine, index=False, if_exists='replace')
 
 
 def main():
